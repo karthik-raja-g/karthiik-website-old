@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Hero from "../components/sections/Hero";
+import Skills from "../components/sections/Skills";
 // import { animated, useSpring, config } from "react-spring";
 
 // const Home = () => {
@@ -18,12 +19,10 @@ import Hero from "../components/sections/Hero";
 //   return <animated.div>{number.to((n) => n.toFixed(2))}</animated.div>;
 // };
 
-
 const Home = () => (
   <Layout>
     <Hero />
-    hola
-    <p>jdhdh</p>
+    <Skills />
   </Layout>
 );
 

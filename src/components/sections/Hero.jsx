@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Angular from '../../images/logos/angularjs.svg';
 
-const HeroDiv = styled.div`
+const HeroSection = styled.section`
   min-height: 100vh;
 `
 const Hero = () => {
@@ -18,11 +19,12 @@ const Hero = () => {
   );
   const items = [one, two, three, four];
   return (
-    <HeroDiv id="intro">
+    <HeroSection id="intro">
       {items.map((item, i) => (
         <div key={i}>{item}</div>
       ))}
-    </HeroDiv>
+      <img src={Angular}/>
+    </HeroSection>
   );
 };
 

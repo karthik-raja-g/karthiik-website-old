@@ -5,6 +5,9 @@ import themes from "../styles/themes";
 import Email from "./Email";
 import SocialLinks from "./SocialLinks";
 
+const AppLayout = styled.div`
+  height: 100vh;
+`;
 const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,11 +24,11 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={themes[theme]}>
       <GlobalStyles />
-      <SocialLinks/>
-      <Email />
-      <section className="fillHeight">
+      <AppLayout className="fillHeight">
+        <SocialLinks />
+        <Email />
         <StyledContent>{children}</StyledContent>
-      </section>
+      </AppLayout>
     </ThemeProvider>
   );
 };
