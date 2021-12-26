@@ -32,7 +32,13 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: ${({ theme }) => theme.link};
     text-decoration: none;
-    transform: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:hover,
+    &:focus {
+      color: ${({ theme }) => theme.link};
+    }
   }
 
   h1,
@@ -46,6 +52,35 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.sectionHeading};
     line-height: 1.1;
   }
-  `;
+
+  .bigHeading {
+    font-size: clamp(40px, 8vw, 80px);
+  }
+  .mediumHeading {
+    font-size: clamp(40px, 8vw, 60px);
+  }
+  .fillHeight {
+    padding: 0 150px;
+
+    @media (max-width: 1080px) {
+      padding: 0 100px;
+    }
+    @media (max-width: 768px) {
+      padding: 0 50px;
+    }
+    @media (max-width: 480px) {
+      padding: 0 25px;
+    }
+  }
+  .socialIcon {
+    fill: none;
+    color: ${({ theme }) => theme.text};
+    width: 20px;
+
+    &:hover {
+      color: ${({ theme }) => theme.link};
+    }
+  }
+`;
 
 export default GlobalStyles;

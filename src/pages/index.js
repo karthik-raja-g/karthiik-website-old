@@ -22,6 +22,8 @@ import Hero from "../components/sections/Hero";
 const Home = () => (
   <Layout>
     <Hero />
+    hola
+    <p>jdhdh</p>
   </Layout>
 );
 

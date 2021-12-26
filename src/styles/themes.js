@@ -1,9 +1,9 @@
 const themes = {
   dark: {
-    body: "#0a192f",
+    body: "black",
     loadingScreen: '#020c1b',
     section: "#112240",
-    text: "#8892b0",
+    text: "black",
     highlightText: "#64ffda",
     link: "#64ffda",
     scroll: "#ccd6f6",
