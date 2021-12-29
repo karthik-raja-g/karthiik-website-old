@@ -11,10 +11,22 @@ import Wordpress from "../../images/logos/wordpress.svg";
 
 const SkillSection = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
   padding: 15px;
+  max-width: 100%;
+
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  }
+
+  img {
+    width: min(100px, 100%);
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+  }
 `;
 
 const logos = [
@@ -30,7 +42,7 @@ const logos = [
 const Skills = () => {
   return (
     <section>
-      <h1 className="bigHeading">Karthik</h1>;
+      <h1 className="bigHeading">Karthik</h1>
       <h1 className="bigHeading">
         I build apps and extensions to make the internet a better place
       </h1>

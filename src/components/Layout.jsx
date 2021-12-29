@@ -6,12 +6,11 @@ import Email from "./Email";
 import SocialLinks from "./SocialLinks";
 
 const AppLayout = styled.div`
-  height: 100vh;
+  counter-reset: section;
 `;
 const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
 `;
 
 const Layout = ({ children }) => {
@@ -24,10 +23,10 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={themes[theme]}>
       <GlobalStyles />
-      <AppLayout className="fillHeight">
+      <AppLayout>
         <SocialLinks />
         <Email />
-        <StyledContent>{children}</StyledContent>
+        <StyledContent className="fillHeight">{children}</StyledContent>
       </AppLayout>
     </ThemeProvider>
   );

@@ -1,14 +1,16 @@
+import mixins from "./mixins";
 const themes = {
   dark: {
-    body: "black",
+    body: '#ccd6f6',
     loadingScreen: '#020c1b',
     section: "#112240",
-    text: "black",
+    text: '#ccd6f6',
     highlightText: "#64ffda",
     link: "#64ffda",
     scroll: "#ccd6f6",
     buttonBorder: "#64ffda",
-    sectionHeading: '#ccd6f6'
+    sectionHeading: '#ccd6f6',
+    mixins
   },
   light: {
     body: "#0a192f",
@@ -19,8 +21,8 @@ const themes = {
     link: "#64ffda",
     scroll: "#ccd6f6",
     buttonBorder: "#64ffda",
-    sectionHeading: '#ccd6f6'
-
+    sectionHeading: '#ccd6f6',
+    mixins
   },
 };
 

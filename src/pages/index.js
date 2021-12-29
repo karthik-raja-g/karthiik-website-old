@@ -1,28 +1,14 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
+import About from "../components/sections/About";
 import Hero from "../components/sections/Hero";
 import Skills from "../components/sections/Skills";
-// import { animated, useSpring, config } from "react-spring";
-
-// const Home = () => {
-//   const [flip, set] = useState(false);
-//   const { number } = useSpring({
-//     reset: true,
-//     reverse: flip,
-//     from: { number: 0 },
-//     number: Math.random(),
-//     delay: 500,
-//     config: config.molasses,
-//     onRest: () => set(!flip),
-//   });
-
-//   return <animated.div>{number.to((n) => n.toFixed(2))}</animated.div>;
-// };
 
 const Home = () => (
   <Layout>
     <Hero />
-    <Skills />
+    {/* <Skills /> */}
+    <About/>
   </Layout>
 );
 
